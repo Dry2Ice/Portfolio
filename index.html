@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме - Негруца Кристина</title>
+    <title>Резюме - Негруца Кристина Сергеевна</title>
+    <meta name="description" content="Резюме редактора Кристины Негруца. Опыт работы в СМИ, копирайтинг, рерайтинг.">
+    <meta name="keywords" content="редактор, копирайтер, журналист, рерайтер, резюме">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -17,6 +19,14 @@
             .print-shadow-none { box-shadow: none !important; }
             .print-m-0 { margin: 0 !important; }
             .no-print { display: none !important; }
+            .print-break-inside { break-inside: avoid; }
+        }
+        .skill-tag {
+            transition: all 0.2s ease;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -28,7 +38,7 @@
         <header class="bg-slate-800 text-white p-8 md:p-12">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
-                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Кристина Негруца</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Негруца Кристина Сергеевна</h1>
                     <h2 class="text-xl md:text-2xl text-slate-300 font-medium">Редактор / Копирайтер</h2>
                 </div>
                 <div class="flex flex-col gap-2 text-sm text-slate-300">
@@ -60,7 +70,7 @@
             <div class="md:col-span-2 space-y-10">
                 
                 <!-- Опыт работы -->
-                <section>
+                <section class="print-break-inside">
                     <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Опыт работы</h3>
                     
                     <div class="relative pl-6 border-l-2 border-slate-300">
@@ -80,7 +90,7 @@
                 </section>
 
                 <!-- Образование -->
-                <section>
+                <section class="print-break-inside">
                     <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Образование</h3>
                     
                     <div class="relative pl-6 border-l-2 border-slate-300">
@@ -96,7 +106,7 @@
                 </section>
 
                 <!-- Портфолио -->
-                <section class="bg-slate-50 rounded-lg p-6 border border-slate-100">
+                <section class="bg-slate-50 rounded-lg p-6 border border-slate-100 print-break-inside">
                     <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>
                         Портфолио
@@ -113,17 +123,19 @@
             <div class="space-y-10">
                 
                 <!-- Навыки -->
-                <section>
+                <section class="print-break-inside">
                     <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Навыки</h3>
                     
                     <div class="mb-4">
                         <h5 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-2">Работа с текстом</h5>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Копирайтинг</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Публицистика</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Редактура</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Фактчекинг</span>
-                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Абсолютная грамотность</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Копирайтинг</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Публицистика</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Художественные тексты</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Литературная обработка</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Редактура</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Фактчекинг</span>
+                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Абсолютная грамотность</span>
                         </div>
                     </div>
 
@@ -140,6 +152,10 @@
                             </li>
                             <li class="flex items-start gap-2">
                                 <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Работа с источниками информации
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Строгое соблюдение дедлайнов
                             </li>
                         </ul>
@@ -148,16 +164,16 @@
                     <div>
                         <h5 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-2">ПО и Инструменты</h5>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-100">MS Word</span>
-                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-100">Excel</span>
-                            <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium border border-orange-100">PowerPoint</span>
-                            <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium border border-indigo-100">Adobe Photoshop</span>
+                            <span class="skill-tag bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-100">MS Word</span>
+                            <span class="skill-tag bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-100">Excel</span>
+                            <span class="skill-tag bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium border border-orange-100">PowerPoint</span>
+                            <span class="skill-tag bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium border border-indigo-100">Adobe Photoshop (базовый)</span>
                         </div>
                     </div>
                 </section>
 
                 <!-- Языки -->
-                <section>
+                <section class="print-break-inside">
                     <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Языки</h3>
                     <ul class="space-y-3 text-slate-700">
                         <li class="flex justify-between items-center">
@@ -176,12 +192,13 @@
                 </section>
 
                 <!-- Личная информация -->
-                <section>
+                <section class="print-break-inside">
                     <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Личные данные</h3>
                     <ul class="space-y-3 text-sm text-slate-700">
                         <li><span class="font-semibold text-slate-900 block">Дата рождения:</span> 25.04.2003 (22 года)</li>
                         <li><span class="font-semibold text-slate-900 block">Гражданство:</span> Российская Федерация</li>
                         <li><span class="font-semibold text-slate-900 block">Семейное положение:</span> Не замужем</li>
+                        <li><span class="font-semibold text-slate-900 block">Образование:</span> Высшее (бакалавр)</li>
                     </ul>
                 </section>
 
