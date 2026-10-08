@@ -2,219 +2,664 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме - Негруца Кристина Сергеевна</title>
-    <meta name="description" content="Резюме редактора Кристины Негруца. Опыт работы в СМИ, копирайтинг, рерайтинг.">
-    <meta name="keywords" content="редактор, копирайтер, журналист, рерайтер, резюме">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Негруца Кристина Сергеевна — редактор, копирайтер, корректор</title>
+    <meta name="description" content="Резюме Кристины Негруца — редактор, копирайтер, корректор. Опыт работы в СМИ, копирайтинг, рерайтинг, корректура. Портфолио текстов и статей.">
+    <meta name="keywords" content="редактор, копирайтер, корректор, журналист, рерайтер, корректура, вычитка, резюме">
+    <meta name="theme-color" content="#1c2430">
+    <meta name="color-scheme" content="light">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Негруца Кристина Сергеевна — редактор, копирайтер, корректор">
+    <meta property="og:description" content="Резюме и портфолио текстов: редактура, копирайтинг, корректура.">
+    <meta property="og:locale" content="ru_RU">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:wght@500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --ink: #1c2430;
+            --heading: #1c2430;
+            --text: #2a3340;
+            --muted: #5f6b7a;
+            --paper: #f6f3ee;
+            --card: #ffffff;
+            --line: #e6e1d8;
+            --accent: #c4432b;
+            --accent-ink: #a3331f;
+            --accent-soft: #fbece8;
+            --radius: 16px;
+            --shadow: 0 1px 2px rgba(28, 36, 48, .06), 0 14px 32px -14px rgba(28, 36, 48, .22);
+            --serif: 'Literata', Georgia, 'Times New Roman', serif;
+            --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        * { margin: 0; }
+        html { color-scheme: light; scroll-behavior: smooth; scroll-padding-top: 76px; }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1f2937;
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
         }
+        ul { padding: 0; }
+        a { color: inherit; }
+        :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+        .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+        .ico {
+            width: 1em; height: 1em; flex: none;
+            fill: none; stroke: currentColor; stroke-width: 2;
+            stroke-linecap: round; stroke-linejoin: round;
+        }
+
+        /* ---------- Кнопки ---------- */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+            padding: .8rem 1.25rem; border-radius: 999px; border: 1px solid transparent;
+            font: 600 .92rem/1 var(--sans); text-decoration: none; cursor: pointer;
+            transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+        .btn .ico { font-size: 1.1em; }
+        .btn:hover { transform: translateY(-1px); }
+        .btn--primary { background: var(--accent); color: #fff; box-shadow: 0 8px 18px -8px rgba(196, 67, 43, .7); }
+        .btn--primary:hover { background: var(--accent-ink); }
+        .btn--light { color: #f6f1e9; background: rgba(255, 255, 255, .1); border-color: rgba(255, 255, 255, .28); }
+        .btn--light:hover { background: rgba(255, 255, 255, .18); }
+        .btn--ghost { color: var(--heading); background: transparent; border-color: var(--line); }
+        .btn--ghost:hover { border-color: var(--ink); }
+        .btn--sm { padding: .6rem .95rem; font-size: .82rem; }
+
+        /* ---------- Верхняя панель ---------- */
+        .topbar {
+            position: sticky; top: 0; z-index: 20;
+            background: rgba(246, 243, 238, .86);
+            -webkit-backdrop-filter: saturate(1.4) blur(10px);
+            backdrop-filter: saturate(1.4) blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+        .topbar__in { display: flex; align-items: center; gap: 20px; height: 58px; }
+        .brand { margin-right: auto; font: 700 1.05rem var(--serif); color: var(--heading); text-decoration: none; }
+        .navlinks { display: flex; gap: 4px; list-style: none; }
+        .navlinks a {
+            display: block; padding: .45rem .85rem; border-radius: 999px;
+            font-size: .88rem; font-weight: 500; color: var(--muted); text-decoration: none;
+            transition: background .15s, color .15s;
+        }
+        .navlinks a:hover { color: var(--heading); background: rgba(28, 36, 48, .06); }
+        .navlinks a[aria-current] { color: var(--accent-ink); background: var(--accent-soft); }
+
+        /* ---------- Шапка ---------- */
+        .hero {
+            --h-text: #f6f1e9;
+            --h-muted: #bcc5d0;
+            --h-line: rgba(255, 255, 255, .18);
+            position: relative; overflow: hidden;
+            margin-top: 20px;
+            display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px; align-items: end;
+            padding: clamp(24px, 5vw, 52px);
+            border-radius: 24px;
+            color: var(--h-text);
+            background: linear-gradient(135deg, #1c2430 0%, #2b3646 100%);
+            box-shadow: var(--shadow);
+        }
+        .hero::after {
+            content: "¶";
+            position: absolute; right: -6px; top: -78px;
+            font: 700 400px/1 var(--serif); color: #fff; opacity: .05;
+            pointer-events: none;
+        }
+        .hero > * { position: relative; z-index: 1; }
+        .hero :focus-visible { outline-color: #fff; }
+
+        .roles { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin-bottom: 18px; }
+        .roles li {
+            padding: .38rem .85rem; border-radius: 999px;
+            font-size: .76rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase;
+            border: 1px solid var(--h-line); background: rgba(255, 255, 255, .06);
+        }
+        .roles li::before {
+            content: ""; display: inline-block; width: 6px; height: 6px; margin-right: .55rem;
+            border-radius: 50%; background: #ef7a62; vertical-align: middle;
+        }
+        .hero h1 {
+            font: 700 clamp(2rem, 5.2vw, 3.4rem)/1.08 var(--serif);
+            letter-spacing: -.01em; margin-bottom: 18px;
+        }
+        .hero__lead { max-width: 52ch; color: var(--h-muted); font-size: 1.02rem; margin-bottom: 26px; }
+        .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .contacts {
+            font-style: normal; display: grid; gap: 14px;
+            padding: 22px; border-radius: 18px;
+            border: 1px solid var(--h-line); background: rgba(255, 255, 255, .06);
+        }
+        .contact { display: flex; align-items: center; gap: 12px; font-size: .95rem; color: var(--h-text); text-decoration: none; overflow-wrap: anywhere; }
+        .contact > .ico { font-size: 1.15rem; color: #ef9a86; }
+        a.contact:hover, .contact a:hover { text-decoration: underline; }
+        .copy {
+            margin-left: auto; display: grid; place-items: center; flex: none;
+            width: 34px; height: 34px; border-radius: 9px; cursor: pointer;
+            border: 1px solid var(--h-line); background: transparent; color: var(--h-text);
+            transition: background .15s;
+        }
+        .copy:hover { background: rgba(255, 255, 255, .14); }
+
+        /* ---------- Карточки ---------- */
+        .card {
+            background: var(--card); border: 1px solid var(--line);
+            border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+        }
+        .card > h2, .portfolio h2 {
+            display: flex; align-items: center; gap: 14px;
+            font: 600 1.4rem/1.2 var(--serif); color: var(--heading); margin-bottom: 22px;
+        }
+        .card > h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+        .card h3 { font: 600 1.12rem/1.3 var(--serif); color: var(--heading); }
+
+        .layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 24px; margin-top: 24px; align-items: start; }
+        .stack { display: grid; gap: 24px; }
+
+        /* ---------- Портфолио ---------- */
+        .portfolio {
+            display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 36px; align-items: center;
+            margin-top: 24px; border-top: 4px solid var(--accent);
+        }
+        .eyebrow { font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px; }
+        .portfolio h2 { margin-bottom: 10px; font-size: 1.7rem; }
+        .portfolio__lead { color: var(--muted); max-width: 52ch; }
+        .kinds {
+            list-style: none; display: grid; gap: 10px; margin: 20px 0 24px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+        .kinds li {
+            display: flex; flex-direction: column; gap: 8px; padding: 14px 16px;
+            border: 1px solid var(--line); border-radius: 12px; background: var(--paper);
+            font-size: .9rem; font-weight: 600; color: var(--heading);
+        }
+        .kinds .ico { font-size: 1.3rem; color: var(--accent); }
+        .portfolio__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .qr-wrap { margin: 0; text-align: center; font-size: .78rem; line-height: 1.4; color: var(--muted); max-width: 170px; }
+        .qr { display: inline-block; padding: 10px; margin-bottom: 8px; background: #fff; border: 1px solid var(--line); border-radius: 14px; line-height: 0; }
+        .qr svg { display: block; width: 148px; height: 148px; }
+
+        /* Шаблон «Избранные работы» (см. комментарий в разметке) */
+        .works { list-style: none; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 22px; }
+        .work { display: grid; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+        .work__type { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
+        .work p { font-size: .9rem; color: var(--muted); }
+        .work a { font-size: .88rem; font-weight: 600; color: var(--accent-ink); }
+
+        /* ---------- Таймлайн ---------- */
+        .tl { position: relative; padding-left: 26px; border-left: 2px solid var(--line); }
+        .tl + .tl { margin-top: 26px; }
+        .tl::before {
+            content: ""; position: absolute; left: -7px; top: .5rem; width: 12px; height: 12px;
+            border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft);
+        }
+        .tl__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+        .badge { padding: .2rem .65rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-size: .74rem; font-weight: 600; }
+        .org { margin-top: 2px; font-weight: 500; color: var(--text); }
+        .sub { margin-top: 2px; font-size: .88rem; color: var(--muted); }
+        .date { display: flex; align-items: center; gap: 6px; margin: 8px 0 12px; font-size: .84rem; color: var(--muted); }
+        .bullets { list-style: none; display: grid; gap: 8px; }
+        .bullets li { position: relative; padding-left: 20px; }
+        .bullets li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+        /* ---------- Навыки ---------- */
+        .group + .group { margin-top: 22px; }
+        .group h3 {
+            margin-bottom: 10px; font: 700 .74rem var(--sans);
+            letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+        }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+        .tag {
+            padding: .36rem .8rem; border-radius: 999px; background: var(--paper);
+            border: 1px solid var(--line); font-size: .84rem; font-weight: 500;
+            transition: border-color .15s, color .15s, transform .15s;
+        }
+        .tag:hover { border-color: var(--accent); color: var(--accent-ink); transform: translateY(-1px); }
+        .tag--tool::before {
+            content: ""; display: inline-block; width: 8px; height: 8px; margin-right: .5rem;
+            border-radius: 2px; background: var(--dot, var(--muted));
+        }
+        .checks { list-style: none; display: grid; gap: 10px; font-size: .92rem; }
+        .checks li { display: flex; align-items: flex-start; gap: 10px; }
+        .checks .ico { margin-top: .3em; color: var(--accent); stroke-width: 2.6; }
+
+        /* ---------- Языки ---------- */
+        .langs { list-style: none; display: grid; gap: 18px; }
+        .lang__row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 7px; }
+        .lang__name { font-weight: 600; color: var(--heading); }
+        .lang__lvl { font-size: .82rem; color: var(--muted); }
+        .meter { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+        .meter i { height: 6px; border-radius: 3px; background: var(--line); }
+        .meter i.on { background: var(--accent); }
+        .note { margin-top: 16px; font-size: .76rem; color: var(--muted); }
+
+        /* ---------- Личные данные ---------- */
+        .facts { display: grid; gap: 16px; font-size: .94rem; }
+        .facts dt { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+        .facts dd { font-weight: 500; color: var(--heading); }
+
+        /* ---------- Подвал и уведомление ---------- */
+        .foot { padding: 28px 0 40px; text-align: center; font-size: .8rem; color: var(--muted); }
+        .toast {
+            position: fixed; left: 50%; bottom: 24px; z-index: 50;
+            padding: .75rem 1.2rem; border-radius: 999px; background: var(--ink); color: #fff;
+            font-size: .88rem; font-weight: 500; box-shadow: var(--shadow);
+            opacity: 0; transform: translate(-50%, 16px); pointer-events: none;
+            transition: opacity .25s ease, transform .25s ease;
+        }
+        .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { transition: none !important; }
+        }
+
+        /* ---------- Мобильная версия ---------- */
+        @media (max-width: 720px) {
+            .navlinks { display: none; }
+            .hero { grid-template-columns: 1fr; gap: 24px; border-radius: 20px; }
+            .layout { grid-template-columns: 1fr; }
+            .portfolio { grid-template-columns: 1fr; gap: 20px; }
+            .qr-wrap { display: none; }
+            .card { padding: 22px; }
+            .hero::after { font-size: 280px; top: -50px; }
+        }
+
+        /* ---------- Печать / PDF (компактно, чтобы резюме помещалось на одну страницу A4) ---------- */
+        @page { size: A4; margin: 10mm; }
         @media print {
-            body { background-color: white; }
-            .print-shadow-none { box-shadow: none !important; }
-            .print-m-0 { margin: 0 !important; }
-            .no-print { display: none !important; }
-            .print-break-inside { break-inside: avoid; }
-        }
-        .skill-tag {
-            transition: all 0.2s ease;
-        }
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            html { scroll-padding-top: 0; }
+            body { background: #fff; font-size: 9pt; line-height: 1.4; }
+            .no-print, .topbar, .toast, .foot { display: none !important; }
+            .wrap { max-width: none; padding: 0; }
+            .card { box-shadow: none; border: 0; border-radius: 0; padding: 0; break-inside: avoid; }
+            .card > h2 { font-size: 12pt; margin-bottom: 8px; gap: 10px; }
+            .card h3 { font-size: 10pt; }
+
+            .hero {
+                --h-text: #1c2430; --h-muted: #4a5565; --h-line: #d9d4ca;
+                display: block; margin-top: 0; padding: 0 0 4mm;
+                border-radius: 0; box-shadow: none; background: #fff; color: var(--h-text);
+                border-bottom: 2px solid var(--accent);
+            }
+            .hero::after { display: none; }
+            .roles { margin-bottom: 8px; gap: 6px; }
+            .roles li { background: transparent; padding: .18rem .6rem; font-size: 7pt; }
+            .hero h1 { font-size: 22pt; margin-bottom: 6px; }
+            .hero__lead { max-width: none; font-size: 9pt; margin-bottom: 8px; }
+            .contacts { display: flex; flex-wrap: wrap; gap: 4px 20px; padding: 0; border: 0; background: transparent; }
+            .contact { font-size: 9pt; gap: 6px; }
+            .contact > .ico { font-size: 1em; color: var(--accent); }
+
+            .portfolio {
+                grid-template-columns: 1fr auto; gap: 6mm; align-items: center;
+                margin-top: 4mm; padding: 3mm 4mm;
+                border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 6px;
+            }
+            .eyebrow { display: none; }
+            .portfolio h2 { font-size: 13pt; margin-bottom: 3px; }
+            .portfolio__lead { font-size: 9pt; }
+            .kinds { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0; }
+            .kinds li { flex-direction: row; align-items: center; gap: 5px; padding: 2px 8px; font-size: 7.5pt; border-radius: 999px; }
+            .kinds .ico { font-size: 1em; }
+            .qr-wrap { display: block !important; max-width: 100px; font-size: 6.5pt; }
+            .qr { padding: 4px; margin-bottom: 3px; border-radius: 8px; }
+            .qr svg { width: 80px; height: 80px; }
+
+            .layout { grid-template-columns: 1.1fr 1fr; gap: 6mm; margin-top: 4mm; }
+            .stack { gap: 4mm; }
+            .tl { break-inside: avoid; padding-left: 16px; }
+            .tl + .tl { margin-top: 10px; }
+            .tl::before { width: 10px; height: 10px; left: -6px; box-shadow: 0 0 0 3px var(--accent-soft); }
+            .badge { font-size: 6.5pt; }
+            .date { margin: 4px 0 6px; font-size: 8pt; }
+            .bullets { gap: 3px; }
+            .group + .group { margin-top: 10px; }
+            .group h3 { margin-bottom: 5px; font-size: 6.5pt; }
+            .tags { gap: 4px; }
+            .tag { padding: .12rem .5rem; font-size: 7.5pt; }
+            .checks { gap: 4px; font-size: 8.5pt; }
+            .langs { gap: 8px; }
+            .lang__row { margin-bottom: 3px; }
+            .meter i { height: 5px; }
+            .note { margin-top: 8px; font-size: 7pt; }
+            .facts { gap: 7px; font-size: 8.5pt; }
+            .facts dt { font-size: 6.5pt; }
+            .org { font-size: 9pt; }
+            .sub { font-size: 8pt; }
+            .lang__lvl { font-size: 8pt; }
         }
     </style>
 </head>
-<body class="py-10 print-m-0">
+<body id="page-top">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-xl print-shadow-none rounded-xl overflow-hidden print-m-0">
-        
-        <!-- Шапка резюме -->
-        <header class="bg-slate-800 text-white p-8 md:p-12">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Негруца Кристина Сергеевна</h1>
-                    <h2 class="text-xl md:text-2xl text-slate-300 font-medium">Редактор / Копирайтер</h2>
-                </div>
-                <div class="flex flex-col gap-2 text-sm text-slate-300">
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>+7 (977) 675-03-99</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                        <a href="mailto:k.negrutsa@bk.ru" class="hover:text-white transition">k.negrutsa@bk.ru</a>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span>г. Истра, Московская обл.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-6 pt-6 border-t border-slate-600">
-                <p class="text-slate-200 leading-relaxed max-w-3xl">
-                    Креативная и ответственная специалистка. Быстро осваиваю новую информацию и готова к решению сложных задач. Умею работать с большими объемами данных, выделять главное и всегда соблюдаю дедлайны.
+    <!-- Иконки -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></symbol>
+        <symbol id="i-print" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></symbol>
+        <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></symbol>
+        <symbol id="i-news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+        <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+    </svg>
+
+    <!-- Навигация -->
+    <nav class="topbar no-print" aria-label="Разделы резюме">
+        <div class="wrap topbar__in">
+            <a class="brand" href="#page-top">К.&nbsp;Негруца</a>
+            <ul class="navlinks">
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#skills">Навыки</a></li>
+            </ul>
+            <button class="btn btn--ghost btn--sm" type="button" data-print>
+                <svg class="ico" aria-hidden="true"><use href="#i-print"/></svg>
+                Сохранить в PDF
+            </button>
+        </div>
+    </nav>
+
+    <div class="wrap">
+
+        <!-- Шапка -->
+        <header class="hero" id="top">
+            <div>
+                <ul class="roles" aria-label="Профессии">
+                    <li>Редактор</li>
+                    <li>Копирайтер</li>
+                    <li>Корректор</li>
+                </ul>
+                <h1>Негруца Кристина Сергеевна</h1>
+                <p class="hero__lead">
+                    Креативная и ответственная специалистка. Быстро осваиваю новую информацию и готова к решению сложных задач. Умею работать с большими объёмами данных, выделять главное и всегда соблюдаю дедлайны.
                 </p>
+                <div class="actions no-print">
+                    <a class="btn btn--primary" href="#portfolio">
+                        <svg class="ico" aria-hidden="true"><use href="#i-folder"/></svg>
+                        Смотреть портфолио
+                    </a>
+                    <a class="btn btn--light" href="mailto:k.negrutsa@bk.ru">
+                        <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+                        Написать
+                    </a>
+                </div>
             </div>
+
+            <address class="contacts">
+                <a class="contact" href="tel:+79776750399">
+                    <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>
+                    <span>+7&nbsp;(977)&nbsp;675-03-99</span>
+                </a>
+                <div class="contact">
+                    <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+                    <a href="mailto:k.negrutsa@bk.ru">k.negrutsa@bk.ru</a>
+                    <button class="copy no-print" type="button" data-copy="k.negrutsa@bk.ru" data-msg="E-mail скопирован" aria-label="Скопировать e-mail">
+                        <svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg>
+                    </button>
+                </div>
+                <div class="contact">
+                    <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+                    <span>г.&nbsp;Истра, Московская обл.</span>
+                </div>
+            </address>
         </header>
 
-        <!-- Основной контент (Grid) -->
-        <main class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-12">
-            
-            <!-- Левая колонка (Широкая) -->
-            <div class="md:col-span-2 space-y-10">
-                
-                <!-- Опыт работы -->
-                <section class="print-break-inside">
-                    <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Опыт работы</h3>
-                    
-                    <div class="relative pl-6 border-l-2 border-slate-300">
-                        <div class="absolute w-3 h-3 bg-slate-800 rounded-full -left-[7px] top-1.5"></div>
-                        <h4 class="text-xl font-semibold text-slate-800">Рерайтер <span class="text-sm font-normal text-slate-500 ml-2">(Университетская практика)</span></h4>
-                        <div class="text-slate-600 font-medium mb-2">АО «Телеканал 360» | г. Истра</div>
-                        <div class="text-sm text-slate-500 mb-3 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                            Июнь 2023 г.
-                        </div>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1.5 mt-2">
-                            <li>Поиск актуальных инфоповодов, соответствующих тематике канала.</li>
-                            <li>Написание информационных заметок и постов для социальных сетей (ВКонтакте, Telegram).</li>
-                            <li>Адаптация новостных материалов под форматы соцсетей.</li>
-                        </ul>
-                    </div>
-                </section>
+        <main>
 
-                <!-- Образование -->
-                <section class="print-break-inside">
-                    <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Образование</h3>
-                    
-                    <div class="relative pl-6 border-l-2 border-slate-300">
-                        <div class="absolute w-3 h-3 bg-slate-800 rounded-full -left-[7px] top-1.5"></div>
-                        <h4 class="text-xl font-semibold text-slate-800">Бакалавр, Журналистика</h4>
-                        <div class="text-slate-600 font-medium mb-1">Российский Государственный Гуманитарный Университет (РГГУ)</div>
-                        <div class="text-sm text-slate-500 mb-2">Специальность: Современные визуальные медиа (Очная форма)</div>
-                        <div class="text-sm text-slate-500 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                            Окончание: 2025 г. | г. Москва
-                        </div>
-                    </div>
-                </section>
+            <!-- Портфолио -->
+            <section class="card portfolio" id="portfolio" aria-labelledby="h-portfolio">
+                <div>
+                    <p class="eyebrow">Работы</p>
+                    <h2 id="h-portfolio">Портфолио</h2>
+                    <p class="portfolio__lead">Сборник моих текстов, статей и университетских работ собран в одной папке на Google&nbsp;Drive.</p>
 
-                <!-- Портфолио -->
-                <section class="bg-slate-50 rounded-lg p-6 border border-slate-100 print-break-inside">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>
-                        Портфолио
-                    </h3>
-                    <p class="text-slate-600 mb-4 text-sm">Сборник моих текстов, статей и университетских работ доступен по ссылке ниже.</p>
-                    <a href="https://drive.google.com/drive/folders/1VOUvb1A1bu0aSNky78H_KlH8bUyj6BhA?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-md font-medium transition shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
-                        Смотреть работы на Google Drive
-                    </a>
-                </section>
-            </div>
+                    <ul class="kinds" aria-label="Что внутри">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg>Тексты</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg>Статьи</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg>Университетские работы</li>
+                    </ul>
 
-            <!-- Правая колонка (Узкая) -->
-            <div class="space-y-10">
-                
-                <!-- Навыки -->
-                <section class="print-break-inside">
-                    <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Навыки</h3>
-                    
-                    <div class="mb-4">
-                        <h5 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-2">Работа с текстом</h5>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Копирайтинг</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Публицистика</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Художественные тексты</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Литературная обработка</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Редактура</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Фактчекинг</span>
-                            <span class="skill-tag bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium border border-slate-200">Абсолютная грамотность</span>
-                        </div>
-                    </div>
+                    <!--
+                        ШАБЛОН «Избранные работы»: раскомментируйте и добавьте 2–4 лучших материала —
+                        рекрутеру проще оценить уровень по конкретному тексту, чем искать его в папке.
 
-                    <div class="mb-4">
-                        <h5 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-2">Аналитика и организация</h5>
-                        <ul class="text-slate-700 space-y-2 text-sm">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Обработка больших массивов информации
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Выделение ключевых тезисов
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Работа с источниками информации
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                Строгое соблюдение дедлайнов
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h5 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-2">ПО и Инструменты</h5>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium border border-blue-100">MS Word</span>
-                            <span class="skill-tag bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-medium border border-green-100">Excel</span>
-                            <span class="skill-tag bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium border border-orange-100">PowerPoint</span>
-                            <span class="skill-tag bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium border border-indigo-100">Adobe Photoshop (базовый)</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Языки -->
-                <section class="print-break-inside">
-                    <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Языки</h3>
-                    <ul class="space-y-3 text-slate-700">
-                        <li class="flex justify-between items-center">
-                            <span class="font-medium">Русский</span>
-                            <span class="text-sm bg-slate-100 px-2 py-0.5 rounded text-slate-600">Родной</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="font-medium">Немецкий</span>
-                            <span class="text-sm bg-slate-100 px-2 py-0.5 rounded text-slate-600">B1 (Средний)</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span class="font-medium">Английский</span>
-                            <span class="text-sm bg-slate-100 px-2 py-0.5 rounded text-slate-600">A2 (Базовый)</span>
+                    <ul class="works">
+                        <li class="work">
+                            <span class="work__type">Статья</span>
+                            <h3>Название материала</h3>
+                            <p>Одно предложение о тексте: тема, объём, где опубликован.</p>
+                            <a href="ССЫЛКА_НА_МАТЕРИАЛ" target="_blank" rel="noopener noreferrer">Читать →</a>
                         </li>
                     </ul>
-                </section>
+                    -->
 
-                <!-- Личная информация -->
-                <section class="print-break-inside">
-                    <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6">Личные данные</h3>
-                    <ul class="space-y-3 text-sm text-slate-700">
-                        <li><span class="font-semibold text-slate-900 block">Дата рождения:</span> 25.04.2003 (22 года)</li>
-                        <li><span class="font-semibold text-slate-900 block">Гражданство:</span> Российская Федерация</li>
-                        <li><span class="font-semibold text-slate-900 block">Семейное положение:</span> Не замужем</li>
-                        <li><span class="font-semibold text-slate-900 block">Образование:</span> Высшее (бакалавр)</li>
-                    </ul>
-                </section>
+                    <div class="portfolio__actions no-print">
+                        <a class="btn btn--primary" href="https://drive.google.com/drive/folders/1VOUvb1A1bu0aSNky78H_KlH8bUyj6BhA?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            Открыть папку на Google Drive
+                            <svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg>
+                        </a>
+                        <button class="btn btn--ghost" type="button" data-copy="https://drive.google.com/drive/folders/1VOUvb1A1bu0aSNky78H_KlH8bUyj6BhA?usp=sharing" data-msg="Ссылка на портфолио скопирована">
+                            <svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg>
+                            Скопировать ссылку
+                        </button>
+                    </div>
+                </div>
 
+                <figure class="qr-wrap">
+                    <div class="qr" role="img" aria-label="QR-код со ссылкой на портфолио"><svg viewBox="0 0 37 37" class="segno"><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#1c2430" d="M0 0.5h7m2 0h2m1 0h3m1 0h2m1 0h1m3 0h1m1 0h1m1 0h2m1 0h7m-37 1h1m5 0h1m2 0h1m3 0h1m1 0h2m5 0h1m2 0h3m2 0h1m5 0h1m-37 1h1m1 0h3m1 0h1m1 0h1m4 0h1m1 0h1m2 0h1m2 0h2m1 0h1m1 0h2m2 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h4m4 0h5m3 0h1m1 0h3m1 0h1m-37 1h1m1 0h3m1 0h1m1 0h2m4 0h1m2 0h4m2 0h3m2 0h1m1 0h1m1 0h3m1 0h1m-37 1h1m5 0h1m1 0h4m8 0h1m6 0h2m1 0h1m5 0h1m-37 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-29 1h1m5 0h2m3 0h3m6 0h1m-29 1h1m1 0h5m3 0h4m1 0h1m1 0h1m1 0h2m2 0h1m2 0h3m1 0h5m-35 1h2m2 0h1m4 0h3m2 0h2m3 0h5m1 0h2m4 0h1m1 0h1m1 0h1m-36 1h4m1 0h3m1 0h2m1 0h1m1 0h3m3 0h3m2 0h6m2 0h4m-37 1h2m2 0h1m3 0h3m2 0h2m1 0h1m1 0h2m1 0h1m4 0h1m1 0h1m1 0h1m2 0h1m2 0h1m-37 1h1m2 0h1m2 0h4m5 0h1m1 0h1m4 0h1m1 0h4m1 0h2m1 0h1m1 0h3m-36 1h2m1 0h1m4 0h4m2 0h2m1 0h6m1 0h1m2 0h2m1 0h1m-31 1h1m2 0h5m1 0h3m1 0h2m1 0h2m3 0h1m2 0h3m2 0h4m1 0h2m-34 1h1m1 0h1m1 0h2m4 0h2m1 0h1m2 0h3m1 0h1m2 0h1m1 0h5m-32 1h1m1 0h1m1 0h2m1 0h1m1 0h1m4 0h1m1 0h1m2 0h4m2 0h1m1 0h5m1 0h3m-37 1h1m1 0h1m1 0h2m5 0h2m1 0h1m1 0h1m1 0h4m7 0h2m2 0h1m1 0h1m-36 1h1m1 0h5m3 0h1m2 0h3m4 0h1m3 0h5m1 0h2m3 0h2m-35 1h2m3 0h1m3 0h1m2 0h1m1 0h1m3 0h2m1 0h2m1 0h2m3 0h1m4 0h1m-35 1h1m2 0h3m1 0h1m1 0h1m2 0h1m1 0h2m4 0h1m1 0h3m2 0h2m1 0h2m-32 1h1m4 0h2m1 0h1m2 0h5m1 0h3m1 0h1m1 0h1m7 0h1m1 0h1m-35 1h3m2 0h3m1 0h1m1 0h5m1 0h1m1 0h1m4 0h1m1 0h2m1 0h4m1 0h2m-36 1h5m3 0h1m1 0h2m2 0h1m2 0h4m1 0h2m1 0h4m1 0h2m2 0h2m-37 1h1m1 0h1m1 0h1m1 0h3m3 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h9m1 0h3m-37 1h1m8 0h1m1 0h1m1 0h1m2 0h1m1 0h3m2 0h1m1 0h1m2 0h1m1 0h2m1 0h1m-34 1h1m5 0h6m1 0h1m1 0h4m1 0h2m2 0h1m1 0h3m3 0h1m2 0h2m-37 1h1m1 0h1m1 0h1m3 0h1m6 0h1m2 0h5m1 0h1m4 0h2m2 0h1m2 0h1m-37 1h1m1 0h2m1 0h3m1 0h3m4 0h2m1 0h1m2 0h5m1 0h5m1 0h3m-29 1h1m1 0h1m8 0h1m2 0h2m1 0h1m1 0h2m3 0h2m1 0h2m-37 1h7m2 0h2m1 0h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h3m-37 1h1m5 0h1m1 0h2m1 0h1m1 0h1m2 0h1m3 0h2m1 0h1m4 0h1m3 0h2m1 0h1m-36 1h1m1 0h3m1 0h1m1 0h5m4 0h1m2 0h4m2 0h7m1 0h2m-36 1h1m1 0h3m1 0h1m1 0h1m1 0h3m3 0h1m2 0h1m1 0h1m1 0h2m2 0h4m1 0h2m1 0h2m-37 1h1m1 0h3m1 0h1m1 0h3m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m5 0h2m-37 1h1m5 0h1m3 0h1m2 0h2m6 0h1m2 0h1m1 0h4m2 0h1m3 0h1m-37 1h7m1 0h1m6 0h1m1 0h2m3 0h4m6 0h5"/></svg></div>
+                    <figcaption>Наведите камеру телефона, чтобы открыть портфолио</figcaption>
+                </figure>
+            </section>
+
+            <div class="layout">
+
+                <!-- Левая колонка -->
+                <div class="stack">
+
+                    <section class="card" id="experience" aria-labelledby="h-exp">
+                        <h2 id="h-exp">Опыт работы</h2>
+                        <article class="tl">
+                            <div class="tl__head">
+                                <h3>Рерайтер</h3>
+                                <span class="badge">Университетская практика</span>
+                            </div>
+                            <p class="org">АО&nbsp;«Телеканал&nbsp;360» · г.&nbsp;Истра</p>
+                            <p class="date">
+                                <svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>
+                                <time datetime="2023-06">Июнь 2023&nbsp;г.</time>
+                            </p>
+                            <ul class="bullets">
+                                <li>Поиск актуальных инфоповодов, соответствующих тематике канала.</li>
+                                <li>Написание информационных заметок и постов для социальных сетей (ВКонтакте, Telegram).</li>
+                                <li>Адаптация новостных материалов под форматы соцсетей.</li>
+                            </ul>
+                        </article>
+                    </section>
+
+                    <section class="card" id="education" aria-labelledby="h-edu">
+                        <h2 id="h-edu">Образование</h2>
+                        <article class="tl">
+                            <h3>Бакалавр, Журналистика</h3>
+                            <p class="org">Российский государственный гуманитарный университет (РГГУ)</p>
+                            <p class="sub">Специальность: Современные визуальные медиа (очная форма)</p>
+                            <p class="date">
+                                <svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>
+                                <span>Окончание: <time datetime="2025">2025&nbsp;г.</time> · г.&nbsp;Москва</span>
+                            </p>
+                        </article>
+                    </section>
+
+
+                    <section class="card" aria-labelledby="h-lang">
+                        <h2 id="h-lang">Языки</h2>
+                        <ul class="langs">
+                            <li>
+                                <div class="lang__row"><span class="lang__name">Русский</span><span class="lang__lvl">Родной</span></div>
+                                <div class="meter" role="img" aria-label="Родной язык"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+                            </li>
+                            <li>
+                                <div class="lang__row"><span class="lang__name">Немецкий</span><span class="lang__lvl">B1 · средний</span></div>
+                                <div class="meter" role="img" aria-label="Уровень B1 по шкале от A1 до C2"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+                            </li>
+                            <li>
+                                <div class="lang__row"><span class="lang__name">Английский</span><span class="lang__lvl">B1 · средний</span></div>
+                                <div class="meter" role="img" aria-label="Уровень B1 по шкале от A1 до C2"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+                            </li>
+                        </ul>
+                        <p class="note">Шкала CEFR: от A1 до C2</p>
+                    </section>
+
+                </div>
+
+                <!-- Правая колонка -->
+                <aside class="stack" aria-label="Навыки и дополнительная информация">
+
+                    <section class="card" id="skills" aria-labelledby="h-skills">
+                        <h2 id="h-skills">Навыки</h2>
+
+                        <div class="group">
+                            <h3>Работа с текстом</h3>
+                            <ul class="tags">
+                                <li class="tag">Редактура</li>
+                                <li class="tag">Корректура</li>
+                                <li class="tag">Вычитка текстов</li>
+                                <li class="tag">Копирайтинг</li>
+                                <li class="tag">Литературная обработка</li>
+                                <li class="tag">Публицистика</li>
+                                <li class="tag">Художественные тексты</li>
+                                <li class="tag">Фактчекинг</li>
+                                <li class="tag">Абсолютная грамотность</li>
+                            </ul>
+                        </div>
+
+                        <div class="group">
+                            <h3>Аналитика и организация</h3>
+                            <ul class="checks">
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Обработка больших массивов информации</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Выделение ключевых тезисов</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Работа с источниками информации</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Строгое соблюдение дедлайнов</li>
+                            </ul>
+                        </div>
+
+                        <div class="group">
+                            <h3>ПО и инструменты</h3>
+                            <ul class="tags">
+                                <li class="tag tag--tool" style="--dot:#2b6cb0">MS Word</li>
+                                <li class="tag tag--tool" style="--dot:#2f9e5b">Excel</li>
+                                <li class="tag tag--tool" style="--dot:#e0742b">PowerPoint</li>
+                                <li class="tag tag--tool" style="--dot:#4c5bd4">Adobe Photoshop</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="card" aria-labelledby="h-personal">
+                        <h2 id="h-personal">Личные данные</h2>
+                        <dl class="facts">
+                            <div><dt>Дата рождения</dt><dd>25.04.2003 (<span id="age">23 года</span>)</dd></div>
+                            <div><dt>Гражданство</dt><dd>Российская Федерация</dd></div>
+                            <div><dt>Семейное положение</dt><dd>Не замужем</dd></div>
+                            <div><dt>Образование</dt><dd>Высшее (бакалавр)</dd></div>
+                        </dl>
+                    </section>
+
+                </aside>
             </div>
         </main>
 
-        <!-- Кнопка печати (не будет видна при сохранении в PDF) -->
-        <div class="bg-slate-50 p-6 text-center border-t border-slate-200 no-print">
-            <button onclick="window.print()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium py-2 px-6 rounded-lg shadow transition flex items-center gap-2 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
-                Сохранить как PDF / Распечатать
-            </button>
-            <p class="text-xs text-slate-500 mt-3">Совет: При печати в браузере снимите галочку "Колонтитулы" (Headers and footers) для идеального вида.</p>
-        </div>
-
+        <footer class="foot no-print">
+            <p>Совет: при сохранении в PDF снимите галочку «Колонтитулы» в окне печати — страница будет выглядеть чище.</p>
+        </footer>
     </div>
 
+    <div class="toast no-print" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+        (function () {
+            'use strict';
+
+            /* Возраст считается автоматически от даты рождения */
+            (function () {
+                var born = new Date(2003, 3, 25), now = new Date();
+                var age = now.getFullYear() - born.getFullYear();
+                var m = now.getMonth() - born.getMonth();
+                if (m < 0 || (m === 0 && now.getDate() < born.getDate())) { age--; }
+                var a = age % 100, b = age % 10;
+                var word = (a > 10 && a < 20) ? 'лет' : b === 1 ? 'год' : (b > 1 && b < 5) ? 'года' : 'лет';
+                var el = document.getElementById('age');
+                if (el && age > 0) { el.textContent = age + ' ' + word; }
+            })();
+
+            /* Печать / сохранение в PDF */
+            document.querySelectorAll('[data-print]').forEach(function (btn) {
+                btn.addEventListener('click', function () { window.print(); });
+            });
+
+            /* Копирование в буфер обмена + уведомление */
+            var toast = document.getElementById('toast'), toastTimer;
+            function showToast(text) {
+                toast.textContent = text;
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 2200);
+            }
+            function copyText(text) {
+                if (navigator.clipboard && window.isSecureContext) {
+                    return navigator.clipboard.writeText(text);
+                }
+                return new Promise(function (resolve, reject) {
+                    var ta = document.createElement('textarea');
+                    ta.value = text; ta.setAttribute('readonly', '');
+                    ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+                    document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy') ? resolve() : reject(); } catch (e) { reject(e); }
+                    document.body.removeChild(ta);
+                });
+            }
+            document.querySelectorAll('[data-copy]').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    copyText(btn.getAttribute('data-copy'))
+                        .then(function () { showToast(btn.getAttribute('data-msg') || 'Скопировано'); })
+                        .catch(function () { showToast('Не удалось скопировать — выделите текст вручную'); });
+                });
+            });
+
+            /* Подсветка текущего раздела в меню */
+            var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
+            if ('IntersectionObserver' in window && links.length) {
+                var byId = {};
+                links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting && byId[e.target.id]) {
+                            links.forEach(function (l) { l.removeAttribute('aria-current'); });
+                            byId[e.target.id].setAttribute('aria-current', 'true');
+                        }
+                    });
+                }, { rootMargin: '-35% 0px -55% 0px' });
+                Object.keys(byId).forEach(function (id) {
+                    var s = document.getElementById(id);
+                    if (s) { io.observe(s); }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
